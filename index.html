@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Coding Quiz</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!--Header - High Scores and Timer-->
+    <nav class="navbar navbar-light bg-light">
+        <a id="highScoreBtn" class="navbar-brand" href="#">View High Scores</a>
+        <h5 id="time"></h5>
+    </nav>
+
+    <!--Start Quiz-->
+    <div id="intro">
+        <h2>JavaScript Coding Quiz</h2>
+        <p>This is a score-based, timed quiz. Any wrong answer will result in ten seconds being removed from the clock.
+            Good luck!</p>
+        <button type="button" id="startButton" class="btn btn-primary btn-sm">Start Quiz</button>
+    </div>
+
+    <!--Showing questions and answers-->
+    <div id="quizContainer" class="container text-center hide">
+        <div id="question"></div>
+        <div id="answerButton"></div>
+    </div>
+
+    <!--High Score-->
+    <div id="highScore" class="hide">
+        <h1>High Scores</h1>
+
+        <ul id=highScoreList></ul>
+
+        <button type="button" id="goBack" class="btn btn-primary btn-sm">Start Over</button>
+        <button type="button" id="clearScore" class="btn btn-primary btn-sm">Clear High Scores</button>
+
+    </div>
+
+    <div id="gameOver" class="hide">
+        <h2>Game Over!</h2>
+        <p id="finalScore"></p>
+        <form class="col-lg-6 offset-lg-3 ">
+            <p>Please submit your initials.</p>
+            <div class="d-flex justify-content-center">
+                <input id="userInitial" type="text" placeholder="Insert initial">
+                <span class="input-group-btn">
+                    <button id="userSubmitBtn" class="btn btn-primary">Submit</button>
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
